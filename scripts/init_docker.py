@@ -8,8 +8,8 @@ from pathlib import Path
 
 import yaml
 
-llvm_path = "/app/llvm"
-linux_path = "/app/linux"
+llvm_path = "/data/llvm"
+linux_path = "/data/linux"
 key_file_path = "/app/llm_keys.yaml"
 
 gen_result_path = "/app/result-generate"
@@ -53,12 +53,21 @@ key_config_in_docker = {"openai_key": "XXX"}
 
 def init_docker():
     # 1. Git clone the Linux kernel source code
+    '''
+    
     res = sp.run(
         ["git", "clone", "https://github.com/torvalds/linux.git", linux_path],
         cwd=Path("/app"),
     )
     if res.returncode != 0:
         raise RuntimeError("Failed to clone Linux kernel source code")
+    */
+    '''
+    if not (linux_path / ".git").is_dir():
+        raise RuntimeError(
+            f"{linux_path} 不是有效的 Linux Git 仓库，请检查 Docker 挂载"
+        )
+
 
     # 2. Prepare the LLVM source code
     res = sp.run(["python3", "scripts/setup_llvm.py", llvm_path])
