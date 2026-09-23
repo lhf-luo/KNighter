@@ -63,7 +63,7 @@ def init_docker():
         raise RuntimeError("Failed to clone Linux kernel source code")
     */
     '''
-    if not (linux_path / ".git").is_dir():
+    if not (Path(linux_path) / ".git").is_dir():
         raise RuntimeError(
             f"{linux_path} 不是有效的 Linux Git 仓库，请检查 Docker 挂载"
         )
