@@ -1,0 +1,9 @@
+LLVM_dir: /data/llvm
+checker_nums: 10
+jobs: 32
+key_file: /app/llm_keys.yaml
+linux_dir: /data/linux
+model: deepseek-flash
+result_dir: /app/result-refine
+scan_commit: v6.11
+scan_timeout: 3600

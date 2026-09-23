@@ -1,0 +1,6 @@
+LLVM_dir: /data/llvm
+checker_nums: 10
+key_file: /app/llm_keys.yaml
+linux_dir: /data/linux
+model: deepseek-flash
+result_dir: /app/result-triage-debug
