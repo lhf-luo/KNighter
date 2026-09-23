@@ -257,12 +257,12 @@ add_clang_library(clangStaticAnalyzerCheckers
         return
 
     # make
-    make_res = sp.run("make -j32", cwd=build_dir, shell=True)
+    make_res = sp.run("make -j16", cwd=build_dir, shell=True)
     if make_res.returncode != 0:
         logger.error("Make failed.")
         return
 
-    make_res = sp.run("make SAGenTestPlugin -j32", cwd=build_dir, shell=True)
+    make_res = sp.run("make SAGenTestPlugin -j16", cwd=build_dir, shell=True)
     if make_res.returncode != 0:
         logger.error("Make failed.")
         return

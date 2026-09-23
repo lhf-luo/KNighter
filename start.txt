@@ -1,0 +1,11 @@
+sudo docker run -it --name knighter-dev \
+  --mount type=bind,src=/home/lhf/KNighter,dst=/app \
+  --mount type=bind,src=/home/lhf/linux,dst=/data/linux \
+  --mount type=bind,src=/home/lhf/llvm-18.1.8,dst=/data/llvm \
+  --workdir /app \
+  knighterhub/knighter \
+  /bin/zsh
+
+sudo docker start knighter-dev
+
+sudo docker exec -it knighter-dev /bin/zsh
