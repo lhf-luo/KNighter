@@ -16,7 +16,7 @@ gen_result_path = "/app/result-generate"
 refine_result_path = "/app/result-refine"
 triage_result_path = "/app/result-triage"
 
-model = "o3-mini"
+model = "deepseek-flash"
 
 generate_config_in_docker = {
     "result_dir": gen_result_path,

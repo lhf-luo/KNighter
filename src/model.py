@@ -92,8 +92,8 @@ def get_client_and_model(model_name: str) -> tuple:
         "google": ("google", "gemini-2.0-flash-exp"),
         "gemini": ("google", "gemini-2.0-flash-exp"),
         # DeepSeek models
-        "deepseek-reasoner": ("deepseek", "deepseek-reasoner"),
-        "deepseek-chat": ("deepseek", "deepseek-chat"),
+        "deepseek-flash": ("deepseek", "deepseek-flash"),
+        "deepseek-v4-pro": ("deepseek", "deepseek-v4-pro"),
     }
 
     # Check if it's a known model

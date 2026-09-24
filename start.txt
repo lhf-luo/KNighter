@@ -9,3 +9,5 @@ sudo docker run -it --name knighter-dev \
 sudo docker start knighter-dev
 
 sudo docker exec -it knighter-dev /bin/zsh
+
+python3 -m pdb main.py gen --config_file /app/config-generate.yaml --commit_file /app/commits/commits-debug.txt
